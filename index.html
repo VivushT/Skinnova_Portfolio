@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FL Skin Research | Home</title>
+  <meta name="description" content="Privacy-Preserving Skin Disease Prediction Using Federated Learning and Deep Learning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body id="top" data-page="home">
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="Skinova AI home">
+        <span class="brand-badge" aria-hidden="true">
+          <img src="assets/images/skinova-mark.svg" alt="">
+        </span>
+        <span class="brand-copy">
+          <span class="brand-title">Skinova AI</span>
+          <span class="brand-subtitle">Skin Scanner</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" type="button">Menu</button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="domain.html">Domain</a>
+        <a href="milestones.html">Milestones</a>
+        <a href="documents.html">Documents</a>
+        <a href="presentations.html">Presentations</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Academic Research Project</p>
+          <h1>Privacy-Preserving Skin Disease Prediction Using Federated Learning and Deep Learning</h1>
+          <p class="lead">Accurate, decentralized, and privacy-aware dermatological diagnosis powered by MobileNetV2, FedAvg, and secure multi-institutional model training.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="domain.html">Explore Research Domain</a>
+            <a class="btn btn-secondary" href="documents.html">View Documents</a>
+          </div>
+          <div class="badge-row">
+            <span>Federated Learning</span>
+            <span>MobileNetV2</span>
+            <span>Transfer Learning</span>
+            <span>FastAPI</span>
+            <span>PyTorch</span>
+            <span>Differential Privacy</span>
+          </div>
+        </div>
+        <div class="hero-visual card glass">
+          <div class="visual-topline">Clinical AI Workflow</div>
+          <div class="workflow">
+            <div class="workflow-node">Hospital A</div>
+            <div class="workflow-node">Hospital B</div>
+            <div class="workflow-node">Hospital C</div>
+            <div class="workflow-core">FedAvg Server</div>
+            <div class="workflow-node">Global Model</div>
+          </div>
+          <p class="muted">Local image data remains within each institution while model weights are aggregated centrally for improved privacy and generalization.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Abstract</p>
+          <h2>Research Overview</h2>
+        </div>
+        <div class="grid two-col">
+          <article class="card">
+            <p>This research investigates a privacy-preserving framework for the classification of bacterial, fungal, viral, and parasitic skin diseases using federated learning and transfer learning. Each participating client institution trains a MobileNetV2-based model locally on dermatological images, then shares model updates rather than raw patient data.</p>
+            <p>The aggregated global model improves diagnostic performance while reducing central data exposure, making the system suitable for distributed healthcare settings that require data confidentiality, scalable deployment, and clinically useful prediction speeds.</p>
+          </article>
+          <article class="card icon-grid">
+            <div class="icon-card">
+              <span class="icon">B</span>
+              <h3>Bacterial</h3>
+              <p>Distributed classification of bacterial skin conditions using image-driven features.</p>
+            </div>
+            <div class="icon-card">
+              <span class="icon">F</span>
+              <h3>Fungal</h3>
+              <p>Transfer-learned CNN detection for common fungal manifestations across sites.</p>
+            </div>
+            <div class="icon-card">
+              <span class="icon">V</span>
+              <h3>Viral</h3>
+              <p>Privacy-aware training for robust recognition of viral dermatological patterns.</p>
+            </div>
+            <div class="icon-card">
+              <span class="icon">P</span>
+              <h3>Parasitic</h3>
+              <p>Federated disease prediction for parasitic skin infections with secure model updates.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tint">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Highlights</p>
+          <h2>Why This Project Matters</h2>
+        </div>
+        <div class="grid three-col">
+          <article class="card">
+            <h3>Privacy by Design</h3>
+            <p>Clinical image data remains local to each institution, reducing the risk associated with centralized datasets.</p>
+          </article>
+          <article class="card">
+            <h3>Efficient Deep Learning</h3>
+            <p>MobileNetV2 enables lightweight inference and transfer learning on modest compute budgets.</p>
+          </article>
+          <article class="card">
+            <h3>Real-Time Integration</h3>
+            <p>REST APIs and service-oriented deployment support practical integration with digital health workflows.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cta">
+        <div>
+          <p class="eyebrow">Next Steps</p>
+          <h2>Review milestones, publications, and project assets</h2>
+        </div>
+        <a class="btn btn-primary" href="milestones.html">Track Progress</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-stack">
+      <div class="footer-intro">
+        <p class="footer-kicker">FL Skin Research</p>
+        <p class="footer-copy">Privacy-preserving skin disease prediction using federated learning, transfer learning, and multi-institutional collaboration.</p>
+      </div>
+      <div class="footer-links" aria-label="Footer links">
+        <a href="documents.html">Documents</a>
+        <a href="presentations.html">Presentations</a>
+        <a href="about.html">Research Team</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-shell">
+        <p>© 2026 FL Skin Research Project, SLIIT.</p>
+        <a href="#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
