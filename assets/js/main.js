@@ -29,5 +29,50 @@ function initSiteChrome() {
   }
 }
 
+function initForcedDownloads() {
+  const downloadLinks = document.querySelectorAll("[data-force-download]");
+
+  downloadLinks.forEach((link) => {
+    link.addEventListener("click", async (event) => {
+      event.preventDefault();
+
+      const href = link.getAttribute("href");
+      const filename = link.dataset.forceDownload;
+
+      if (!href || !filename) {
+        return;
+      }
+
+      try {
+        const response = await fetch(href);
+
+        if (!response.ok) {
+          throw new Error("Download failed");
+        }
+
+        const blob = await response.blob();
+        const objectUrl = URL.createObjectURL(blob);
+        const tempLink = document.createElement("a");
+
+        tempLink.href = objectUrl;
+        tempLink.download = filename;
+        document.body.appendChild(tempLink);
+        tempLink.click();
+        tempLink.remove();
+        URL.revokeObjectURL(objectUrl);
+      } catch (error) {
+        const fallbackLink = document.createElement("a");
+
+        fallbackLink.href = href;
+        fallbackLink.download = filename;
+        document.body.appendChild(fallbackLink);
+        fallbackLink.click();
+        fallbackLink.remove();
+      }
+    });
+  });
+}
+
 initSiteChrome();
 initMilestoneFilter();
+initForcedDownloads();
