@@ -215,6 +215,10 @@ img {
   margin: 1.8rem 0;
 }
 
+.hero-copy {
+  align-self: center;
+}
+
 .badge-row span {
   padding: 0.7rem 0.95rem;
   border-radius: 999px;
@@ -295,6 +299,91 @@ img {
 .contact-form label,
 .role {
   color: var(--muted);
+}
+
+.hero-visual {
+  align-self: stretch;
+}
+
+.home-panel {
+  display: grid;
+  gap: 1.35rem;
+  padding: 1.75rem;
+  border: 1px solid rgba(22, 49, 62, 0.08);
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at top right, rgba(30, 90, 168, 0.12), transparent 34%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.92), rgba(239, 248, 249, 0.92));
+  box-shadow: 0 22px 70px rgba(18, 71, 88, 0.14);
+}
+
+.home-panel-head {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.home-panel-head h2 {
+  margin: 0;
+  font-size: clamp(1.55rem, 2.4vw, 2.2rem);
+  line-height: 1.08;
+}
+
+.home-panel-head .muted {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.home-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.home-stat-card {
+  display: grid;
+  gap: 0.3rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(22, 49, 62, 0.08);
+}
+
+.home-stat-value {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--primary-dark);
+}
+
+.home-stat-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.home-feature-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.home-feature-item {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.95rem 1rem;
+  border-left: 4px solid rgba(15, 139, 141, 0.34);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.home-feature-item strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.98rem;
+}
+
+.home-feature-item span {
+  color: var(--muted);
+  line-height: 1.55;
 }
 
 .workflow {
@@ -536,6 +625,10 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .home-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
   .cta,
   .toolbar,
   .footer-shell {
@@ -580,6 +673,11 @@ textarea {
   .glass,
   .cta {
     padding: 1.2rem;
+  }
+
+  .home-panel {
+    padding: 1.25rem;
+    border-radius: 24px;
   }
 
   .container {
