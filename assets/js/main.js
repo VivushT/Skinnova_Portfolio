@@ -32,6 +32,17 @@ function initSiteChrome() {
 function initForcedDownloads() {
   const downloadLinks = document.querySelectorAll("[data-force-download]");
 
+  const triggerDownload = (href, filename) => {
+    const tempLink = document.createElement("a");
+
+    tempLink.href = href;
+    tempLink.download = filename;
+    tempLink.style.display = "none";
+    document.body.appendChild(tempLink);
+    tempLink.click();
+    tempLink.remove();
+  };
+
   downloadLinks.forEach((link) => {
     link.addEventListener("click", async (event) => {
       event.preventDefault();
@@ -44,7 +55,7 @@ function initForcedDownloads() {
       }
 
       try {
-        const response = await fetch(href);
+        const response = await fetch(href, { cache: "no-store" });
 
         if (!response.ok) {
           throw new Error("Download failed");
@@ -52,22 +63,11 @@ function initForcedDownloads() {
 
         const blob = await response.blob();
         const objectUrl = URL.createObjectURL(blob);
-        const tempLink = document.createElement("a");
 
-        tempLink.href = objectUrl;
-        tempLink.download = filename;
-        document.body.appendChild(tempLink);
-        tempLink.click();
-        tempLink.remove();
-        URL.revokeObjectURL(objectUrl);
+        triggerDownload(objectUrl, filename);
+        window.setTimeout(() => URL.revokeObjectURL(objectUrl), 30000);
       } catch (error) {
-        const fallbackLink = document.createElement("a");
-
-        fallbackLink.href = href;
-        fallbackLink.download = filename;
-        document.body.appendChild(fallbackLink);
-        fallbackLink.click();
-        fallbackLink.remove();
+        triggerDownload(href, filename);
       }
     });
   });
