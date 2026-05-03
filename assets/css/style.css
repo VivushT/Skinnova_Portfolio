@@ -219,6 +219,30 @@ img {
   align-self: center;
 }
 
+body[data-page="home"] .hero-grid {
+  align-items: center;
+}
+
+body[data-page="home"] .hero-copy {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+body[data-page="home"] .hero h1 {
+  max-width: 14ch;
+}
+
+body[data-page="home"] .lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body[data-page="home"] .hero-actions,
+body[data-page="home"] .badge-row {
+  justify-content: center;
+}
+
 .badge-row span {
   padding: 0.7rem 0.95rem;
   border-radius: 999px;
